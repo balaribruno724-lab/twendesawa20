@@ -1,36 +1,102 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Twendesawa 20 - Save 20 Bob Daily</title>
+<title>TWENDESAWA - Together We Rise</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
-body{background:#0f3d1e;color:white}
-.top{padding:30px 15px;text-align:center}
-.top h1{font-size:44px}
-.top h1 span{color:#d4af37}
-.card{background:white;color:#111;border-radius:18px;padding:20px;margin:15px}
-.card h3{font-size:22px}
-.price{font-size:30px;font-weight:bold;color:#0f3d1e;margin:10px 0}
-.btn{display:block;background:#25D366;color:white;text-decoration:none;text-align:center;padding:15px;border-radius:12px;font-weight:bold;margin-top:12px}
-.footer{text-align:center;font-size:13px;opacity:.8;padding:0 15px 30px}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Georgia,serif}
+body{background:#043d22;color:white;padding:15px}
+.header{text-align:center;padding:25px 5px}.header h1{font-size:46px;letter-spacing:2px}.header h1 span{color:#f5c518}
+.quote{font-style:italic;font-size:16px;margin-top:12px;opacity:.9;line-height:1.5;max-width:600px;margin-left:auto;margin-right:auto}
+.badge{background:#f5c518;color:#043d22;display:inline-block;padding:9px 20px;border-radius:20px;font-weight:bold;margin-top:15px}
+.rule{background:#f5c518;color:#043d22;text-align:center;padding:14px;border-radius:12px;margin:18px auto;max-width:750px;font-size:15px;line-height:1.6;font-style:italic}
+.sub{text-align:center;margin:15px 0;font-style:italic}
+.groups{display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
+.card{background:white;color:#111;border-radius:18px;padding:22px;width:100%;max-width:360px}
+.card h2{font-size:24px;color:#043d22}.card h2 small{font-size:14px;color:#666;display:block;font-style:italic}
+.price{font-size:34px;font-weight:900;margin:10px 0}
+.tabs{display:flex;gap:6px;margin:12px 0}.tabs button{flex:1;padding:9px;border:2px solid #043d22;background:white;border-radius:10px;font-weight:bold}.tabs button.active{background:#043d22;color:white}
+.calc{background:#eafff1;padding:14px;border-radius:12px;line-height:1.9;font-weight:bold}
+ul{list-style:none;margin:12px 0;line-height:1.8;font-size:14px}
+.join{display:block;text-align:center;background:#16a34a;color:white;padding:13px;border-radius:12px;text-decoration:none;font-weight:900;margin-top:10px}
+.join.g2{background:#0e7490}.join.g3{background:#b45309}.join.g4{background:#7c3aed}.join.g5{background:#111}
+.lock{background:white;color:#111;border-radius:18px;padding:24px;max-width:750px;margin:20px auto}
+.lock h2{text-align:center;color:#043d22;font-size:28px}.lock p{text-align:center;margin:8px 0 15px;font-size:14px;font-style:italic}
+.lock label{font-weight:bold;display:block;margin-top:12px}
+.lock select,.lock input{width:100%;padding:13px;border:2px solid #ddd;border-radius:10px;margin-top:6px;font-size:16px}
+.lockbtn{width:100%;background:#f5c518;border:none;padding:15px;border-radius:12px;font-weight:900;font-size:17px;margin-top:15px}
+.result{background:#eafff1;padding:15px;border-radius:12px;margin-top:15px;line-height:1.9;font-weight:bold;display:none;text-align:center}
+.whatsapp{display:none;background:#16a34a;color:white;text-align:center;padding:14px;border-radius:12px;text-decoration:none;font-weight:900;margin-top:10px}
+.check{margin-top:15px;background:#fff8e1;padding:16px;border-radius:10px;font-size:14px;line-height:1.8;font-style:italic;border-left:4px solid #f5c518}
+.footer{text-align:center;margin:25px 0;font-size:13px;opacity:.85;line-height:1.7;font-style:italic}
+@media(min-width:800px){.card{width:32%}}
 </style>
 </head>
 <body>
-<div class="top">
-<h1>TWENDE<span>SAWA</span> 20</h1>
-<p>Save As Low As 20 Bob Daily - Tunaenda Sawa!</p>
-<p style="margin-top:10px;background:#d4af37;color:#0f3d1e;display:inline-block;padding:6px 16px;border-radius:20px;font-weight:bold">20 BOB TU KWA SIKU</p>
+<div class="header"><h1>TWENDE<span>SAWA</span></h1>
+<p class="quote">"Greatness is not born from what you have, but from what you consistently build. A small seed, watered daily, becomes a mighty forest."</p>
+<div class="badge">CHOOSE YOUR CIRCLE 👇 - 5 GROUPS</div></div>
+
+<div class="rule">🔒 "Your treasure is sealed for a season. Until the appointed day arrives, it rests untouched — for true wealth is not rushed, it is ripened."</div>
+<p class="sub">Discipline is freedom. Choose your level. Grow at your own pace.</p>
+
+<div class="groups">
+<div class="card"><h2>💚 CIRCLE 1<small>The Seed - Twendesawa 20</small></h2><div class="price">20 KES</div><div class="tabs"><button class="active" onclick="setCalc(this,'g1','daily')">Daily</button><button onclick="setCalc(this,'g1','weekly')">Weekly</button><button onclick="setCalc(this,'g1','monthly')">Monthly</button></div><div class="calc" id="calc-g1">Week 1 = 140 KES<br>Month 1 = 600 KES<br>3 Months = 1,800 KES<br>6 Months = 3,600 KES</div><ul><li>✅ No interest</li><li>✅ No fines</li><li>🔒 Sealed until your day</li></ul><a class="join" href="https://wa.me/254790917382?text=I%20want%20to%20join%20CIRCLE%201%20-%2020%20KES">JOIN CIRCLE 1 - 20 KES</a></div>
+<div class="card"><h2>💙 CIRCLE 2<small>The Sprout - Twendesawa 30</small></h2><div class="price">30 KES</div><div class="tabs"><button class="active" onclick="setCalc(this,'g2','daily')">Daily</button><button onclick="setCalc(this,'g2','weekly')">Weekly</button><button onclick="setCalc(this,'g2','monthly')">Monthly</button></div><div class="calc" id="calc-g2">Week 1 = 210 KES<br>Month 1 = 900 KES<br>3 Months = 2,700 KES<br>6 Months = 5,400 KES</div><ul><li>✅ No interest</li><li>✅ No fines</li><li>🔒 Sealed until your day</li></ul><a class="join g2" href="https://wa.me/254790917382?text=I%20want%20to%20join%20CIRCLE%202%20-%2030%20KES">JOIN CIRCLE 2 - 30 KES</a></div>
+<div class="card"><h2>🧡 CIRCLE 3<small>The Root - Twendesawa 50</small></h2><div class="price">50 KES</div><div class="tabs"><button class="active" onclick="setCalc(this,'g3','daily')">Daily</button><button onclick="setCalc(this,'g3','weekly')">Weekly</button><button onclick="setCalc(this,'g3','monthly')">Monthly</button></div><div class="calc" id="calc-g3">Week 1 = 350 KES<br>Month 1 = 1,500 KES<br>3 Months = 4,500 KES<br>6 Months = 9,000 KES</div><ul><li>✅ No interest</li><li>✅ No fines</li><li>🔒 Sealed until your day</li></ul><a class="join g3" href="https://wa.me/254790917382?text=I%20want%20to%20join%20CIRCLE%203%20-%2050%20KES">JOIN CIRCLE 3 - 50 KES</a></div>
+<div class="card"><h2>💜 CIRCLE 4<small>The Branch - Twendesawa 100</small></h2><div class="price">100 KES</div><div class="tabs"><button class="active" onclick="setCalc(this,'g4','daily')">Daily</button><button onclick="setCalc(this,'g4','weekly')">Weekly</button><button onclick="setCalc(this,'g4','monthly')">Monthly</button></div><div class="calc" id="calc-g4">Week 1 = 700 KES<br>Month 1 = 3,000 KES<br>3 Months = 9,000 KES<br>6 Months = 18,000 KES</div><ul><li>✅ No interest</li><li>✅ No fines</li><li>🔒 Sealed until your day</li></ul><a class="join g4" href="https://wa.me/254790917382?text=I%20want%20to%20join%20CIRCLE%204%20-%20100%20KES">JOIN CIRCLE 4 - 100 KES</a></div>
+<div class="card"><h2>🖤 CIRCLE 5<small>The Forest - Twendesawa 200</small></h2><div class="price">200 KES</div><div class="tabs"><button class="active" onclick="setCalc(this,'g5','daily')">Daily</button><button onclick="setCalc(this,'g5','weekly')">Weekly</button><button onclick="setCalc(this,'g5','monthly')">Monthly</button></div><div class="calc" id="calc-g5">Week 1 = 1,400 KES<br>Month 1 = 6,000 KES<br>3 Months = 18,000 KES<br>6 Months = 36,000 KES</div><ul><li>✅ No interest</li><li>✅ No fines</li><li>🔒 Sealed until your day</li></ul><a class="join g5" href="https://wa.me/254790917382?text=I%20want%20to%20join%20CIRCLE%205%20-%20200%20KES">JOIN CIRCLE 5 - 200 KES</a></div>
 </div>
-<div class="card">
-<h3>💚 Twendesawa 20</h3>
-<div class="price">20 Bob / siku</div>
-<p>Anza pole pole. Hakuna pressure. Kila siku unaweka 20 bob tu.</p>
-<p style="background:#f0fdf4;padding:10px;border-radius:10px;margin-top:10px">👉 Mwezi 1 = <b>600 Bob</b><br>👉 Miezi 3 = <b>1,800 Bob</b><br>👉 Miezi 6 = <b>3,600 Bob</b></p>
-<p style="margin-top:10px">✅ Hakuna interest<br>✅ Hakuna fine<br>✅ Pesa yako ni yako</p>
-<a class="btn" href="https://wa.me/254790917382?text=Nataka%20kujiunga%20na%20Twendesawa%2020">JOIN TWENDESAWA 20 KWA WHATSAPP</a>
+
+<div class="lock">
+<h2>🔒 LOCK YOUR FUTURE</h2>
+<p>"We do not save what is left after spending. We spend what is left after saving."</p>
+<div class="check"><b>THE COVENANT OF THE LOCK:</b><br>
+"When you lock, you make a promise to your future self. Your savings shall remain undisturbed, gently growing in silence, until the day you appointed. For just as a farmer does not dig up his seed to see if it has grown, so shall you wait — and your patience shall be rewarded in full."
 </div>
-<p class="footer">Twendesawa 20 - Tunaenda Sawa!<br>WhatsApp: 0790917382 | Kiambu, Kenya</p>
+<label>1. Choose Your Circle / Amount:</label>
+<select id="amt"><option value="20">20 KES - Circle 1 - The Seed</option><option value="30">30 KES - Circle 2 - The Sprout</option><option value="50">50 KES - Circle 3 - The Root</option><option value="100">100 KES - Circle 4 - The Branch</option><option value="200">200 KES - Circle 5 - The Forest</option></select>
+<label>2. How Often Will You Save?</label>
+<select id="freq"><option value="daily">Every Day (Daily)</option><option value="weekly">Every Week (Weekly)</option><option value="monthly">Every Month (Monthly)</option></select>
+<label>3. Choose Your Unlock Date - The Day Your Harvest Comes:</label>
+<input type="date" id="unlockDate">
+<button class="lockbtn" onclick="calcLock()">🔒 CALCULATE & LOCK NOW</button>
+<div class="result" id="result"></div>
+<a class="whatsapp" id="waLink" href="#">✅ LOCK THIS ON WHATSAPP</a>
+</div>
+
+<div class="footer">"We rise by lifting others. Together, we go far."<br>Twendesawa - Together We Go<br>WhatsApp: 0790917382 | Kiambu, Kenya</div>
+
+<script>
+const data={
+ g1:{daily:"Week 1 = 140 KES<br>Month 1 = 600 KES<br>3 Months = 1,800 KES<br>6 Months = 3,600 KES",weekly:"Week 1 = 20 KES<br>Month 1 = 80 KES<br>3 Months = 240 KES<br>6 Months = 480 KES",monthly:"Month 1 = 20 KES<br>3 Months = 60 KES<br>6 Months = 120 KES<br>Year 1 = 240 KES"},
+ g2:{daily:"Week 1 = 210 KES<br>Month 1 = 900 KES<br>3 Months = 2,700 KES<br>6 Months = 5,400 KES",weekly:"Week 1 = 30 KES<br>Month 1 = 120 KES<br>3 Months = 360 KES<br>6 Months = 720 KES",monthly:"Month 1 = 30 KES<br>3 Months = 90 KES<br>6 Months = 180 KES<br>Year 1 = 360 KES"},
+ g3:{daily:"Week 1 = 350 KES<br>Month 1 = 1,500 KES<br>3 Months = 4,500 KES<br>6 Months = 9,000 KES",weekly:"Week 1 = 50 KES<br>Month 1 = 200 KES<br>3 Months = 600 KES<br>6 Months = 1,200 KES",monthly:"Month 1 = 50 KES<br>3 Months = 150 KES<br>6 Months = 300 KES<br>Year 1 = 600 KES"},
+ g4:{daily:"Week 1 = 700 KES<br>Month 1 = 3,000 KES<br>3 Months = 9,000 KES<br>6 Months = 18,000 KES",weekly:"Week 1 = 100 KES<br>Month 1 = 400 KES<br>3 Months = 1,200 KES<br>6 Months = 2,400 KES",monthly:"Month 1 = 100 KES<br>3 Months = 300 KES<br>6 Months = 600 KES<br>Year 1 = 1,200 KES"},
+ g5:{daily:"Week 1 = 1,400 KES<br>Month 1 = 6,000 KES<br>3 Months = 18,000 KES<br>6 Months = 36,000 KES",weekly:"Week 1 = 200 KES<br>Month 1 = 800 KES<br>3 Months = 2,400 KES<br>6 Months = 4,800 KES",monthly:"Month 1 = 200 KES<br>3 Months = 600 KES<br>6 Months = 1,200 KES<br>Year 1 = 2,400 KES"}
+};
+function setCalc(btn,id,type){btn.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('calc-'+id).innerHTML=data[id][type];}
+function calcLock(){
+ let amt=parseInt(document.getElementById('amt').value);
+ let freq=document.getElementById('freq').value;
+ let dateVal=document.getElementById('unlockDate').value;
+ if(!dateVal){alert("Please choose your unlock date first!");return;}
+ let today=new Date(); today.setHours(0,0,0,0);
+ let unlock=new Date(dateVal);
+ let diff=Math.ceil((unlock-today)/(1000*60*60*24));
+ if(diff<=0){alert("Please choose a future date!");return;}
+ let total=0,times=0;
+ if(freq=='daily'){times=diff;total=amt*diff;}
+ if(freq=='weekly'){times=Math.floor(diff/7);total=amt*times;}
+ if(freq=='monthly'){times=Math.floor(diff/30);total=amt*times;}
+ let freqText=freq=='daily'?'Every Day':freq=='weekly'?'Every Week':'Every Month';
+ document.getElementById('result').style.display='block';
+ document.getElementById('result').innerHTML="🔒 YOU ARE LOCKED IN!<br>Amount: "+amt+" KES - "+freqText+"<br>Days Remaining: "+diff+" days<br>Times You Will Save: "+times+"<br><span style='font-size:24px'>Your Harvest: "+total.toLocaleString()+" KES</span><br>Unlock Date: "+dateVal+"<br><span style='font-style:italic;color:#043d22'>Your treasure rests untouched until the appointed day — for true wealth is not rushed, it is ripened.</span>";
+ let msg="I want to LOCK my savings. Amount: "+amt+" KES, "+freqText+", Unlock Date: "+dateVal+", Total: "+total+" KES. I promise to let it rest until the appointed day.";
+ document.getElementById('waLink').href="https://wa.me/254790917382?text="+encodeURIComponent(msg);
+ document.getElementById('waLink').style.display='block';
+}
+</script>
 </body>
 </html>
